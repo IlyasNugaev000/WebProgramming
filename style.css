@@ -1,0 +1,45 @@
+body {
+	background: #f9e933;
+}
+header, main, footer {
+	min-width: 855px;
+	font-size: 23px;
+}
+header.container, main.container, footer.container {
+	max-width: 855px;
+	margin: auto;
+}
+header {
+	background: white;
+	overflow: hidden;
+}
+header h1 {
+	float: left;
+	width: 570px;
+}
+header nav {
+	float: right;
+}
+main {
+	background: white;
+	overflow: auto;  
+}
+main .description {
+	float: left;
+}
+main .lightbukb {
+	margin-top: 20px;
+	float: right;  
+}
+main .light {
+	margin-bottom: 85px;
+}
+
+footer .contact {
+	float: left;
+}
+footer .sitemap {
+	float: right;
+	width: 285px;
+}
+
