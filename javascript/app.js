@@ -1,13 +1,20 @@
 var main = function () {
 	"use strict";
-	var tabNumber;
-	for (tabNumber = 1; tabNumber <= 3; tabNumber++) {
-		var tabSelector = ".tabs a:nth-child(" + tabNumber + ") span";
-		$(tabSelector).on("click", function () {
-			$(".tabs span").removeClass("active");
-			$(this).addClass("active");
+	$(".tabs a span").toArray().forEach(function (element) {
+		$(element).on("click", function () {
+			var $element = $(element);
+			$(".tabs a span").removeClass("active");
+			$element.addClass("active");
+			$("main .content").empty();
+			if ($element.parent().is(":nth-child(1)")) {
+				console.log("Щелчок на первой вкладке!");
+			} else if ($element.parent().is(":nth-child(2)")) {
+				console.log("Щелчок на второй вкладке!");
+			} else if ($element.parent().is(":nth-child(3)")) {
+				console.log("Щелчок на третьей вкладке!");
+			}
 			return false;
 		});
-	}
+	});
 };
 main();
