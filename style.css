@@ -1,5 +1,5 @@
 body {
-	background: #5f9ea0;
+	background: #4682B4;
 }
 header, main, footer {
 	min-width: 855px;
@@ -33,7 +33,7 @@ header.container, main.container, footer.container {
 	font-weight: bold;
 }
 header {
-	background: #29b297;
+	background: #B0C4DE;
 	overflow: hidden;
 }
 header h1 {
@@ -54,7 +54,7 @@ header a, footer a {
 	line-height: 35px;
 }
 main {
-	background: #29b297;
+	background: #B0C4DE;
 	overflow: auto;  
 }
 main .content {
