@@ -58,33 +58,6 @@ var main = function () {
 	$(".tabs a:first-child span").trigger("click");
 };
 
-var check_button = function () {
-	$('.input_btn').on('click',function(){
-		if (($(".form__field").val() !== "") && (($(".form__field").val()).trim().length > 0)){
-			newToDo= $('.form__field').val();
-			if (newToDo!='') {
-				toDos.push( newToDo);
-				alert('Новое задание "'+newToDo+'" успешно добавлено!');
-				$('.form__field').val("");
-			}
-		}
-	});
-
-	$(".form__field").on("keypress", function (event) {
-		if (event.keyCode === 13) {
-			if (($(".form__field").val() !== "") && (($(".form__field").val()).trim().length > 0)){
-				newToDo= $('.form__field').val();
-				if (newToDo!='') {
-					toDos.push( newToDo);
-					alert('Новое задание "'+newToDo+'" успешно добавлено!');
-					$('.form__field').val("");
-				}
-			}
-		}
-	});
-}
-
 $(document).ready(function(){
 	main();
-	//check_button();
 });
