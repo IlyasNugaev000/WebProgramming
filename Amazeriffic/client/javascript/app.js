@@ -31,6 +31,51 @@ var main = function (toDoObjects) {
 
 			else if ($element.parent().is(":nth-child(3)")) {
 				console.log("Щелчок на вкладке Теги");
+				var organizedByTag = [
+				{
+					"name" : "покупки",
+					"toDos" : ["Купить продукты"]
+				},
+				{
+					"name" : "рутина",
+					"toDos" : ["Купить продукты", 
+							   "Вывести Грейси на прогулку в парк"]
+				},
+				{
+					"name" : "писательство",
+					"toDos" : ["Сделать несколько новых задач", 
+								"Закончить писать книгу"]
+				},
+				{
+					"name" : "работа",
+					"toDos" : ["Сделать несколько новых задач", 
+								"Подготовиться к лекциив понедельник",
+								"Ответить на электронные письма", 
+								"Закончить писать книгу"]
+				},
+				{
+					"name" : "преподавание",
+					"toDos" : ["Подготовиться к лекции в понедельник"]
+				},
+				{
+					"name" : "питомцы",
+					"toDos" : ["Вывести Грейси на прогулку в парк"]
+				}
+
+				];
+
+				organizedByTag.forEach(function (tag) {
+					var $tagName=$("<h3>").text(tag.name);
+					var $content=$("<ul>");
+
+					tag.toDos.forEach(function (description) {
+						var $task=$("<li>").text(description);
+						$content.append($task);
+					});
+
+					$("main .content").append($tagName);
+					$("main .content").append($content);
+				});
 			} 
 
 			else if ($element.parent().is(":nth-child(4)")) {
@@ -67,9 +112,6 @@ var main = function (toDoObjects) {
 };
 
 $(document).ready(function() {
-	$.ajaxPrefilter( "json script", function( options ) {
-  options.crossDomain = true;
-});
 	$.getJSON("todos.json", function (toDoObjects) {
 		main(toDoObjects);
 	});
