@@ -137,3 +137,65 @@ button:active {
   bottom: 3px;
   box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #07526e;
 }
+
+.content div {
+margin-left: 0;
+list-style: none;
+position: relative;
+counter-reset: li;
+}
+.content div ul {
+top: 0.7em;
+margin-bottom: 1.5em;
+border: 3px solid #CADFCF;
+padding: 0.6em;
+border-radius: 4px;
+background: #B0C4DE;
+color: #231F20;
+font-family: "Trebuchet MS", "Lucida Sans";
+list-style-type: none;
+}
+.content div h3 {
+position: absolute;
+top: -0.45em;
+left: 1.5em;
+font-size: 20px;
+font-weight: bold;
+color: #4682B4;
+background: #B0C4DE;
+border-radius: 50%;
+counter-increment: li;
+}
+
+.bullet {
+margin-left: 0;
+list-style: none;
+counter-reset: li;
+}
+.bullet li {
+position: relative;
+margin-bottom: 1.5em;
+border: 3px solid #CADFCF;
+padding: 0.6em;
+border-radius: 4px;
+background: #B0C4DE;
+color: #231F20;
+font-family: "Trebuchet MS", "Lucida Sans";
+}
+.bullet li:before {
+position: absolute;
+top: -0.7em;
+padding-left: 0.4em;
+padding-right: 0.4em;
+font-size: 20px;
+font-weight: bold;
+color: #4682B4;
+background: #B0C4DE;
+border-radius: 50%;
+counter-increment: li;
+content: counter(li);
+}
+.content input {
+	padding: 0;
+	margin: 0;
+}
