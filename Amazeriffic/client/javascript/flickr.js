@@ -1,7 +1,7 @@
 var main = function () {
 	"use strict";
 	var url = "http://api.flickr.com/services/feeds/photos_public.gne?"+
-	"=cat&format=json&jsoncallback=?"
+	"tags=dog&format=json&jsoncallback=?"
 	$.getJSON(url, function (flickrResponse) {
 		flickrResponse.items.forEach(function (photo) {
 			var $img = $("<img>").hide();
