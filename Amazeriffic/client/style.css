@@ -91,7 +91,7 @@ footer .sitemap {
 	background: #eee;
 }
 
-input {
+.index_button {
    border: 1px solid #cccccc;
    border-radius: 3px;
    -webkit-border-radius: 3px;
@@ -195,7 +195,7 @@ border-radius: 50%;
 counter-increment: li;
 content: counter(li);
 }
-.content input {
+.content .index_button {
 	padding: 0;
 	margin: 0;
 }

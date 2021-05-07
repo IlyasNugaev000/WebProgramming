@@ -83,8 +83,8 @@ var main = function (toDoObjects) {
 			} 
 
 			else if ($element.parent().is(":nth-child(4)")) {
-				$("main .content").append('<input class="description" placeholder="Новое описание" /> ');
-				$("main .content").append('<br> <br> <input class="tags" placeholder="Новый тэг" /> <button type="button" class="input_btn">+</button>');
+				$("main .content").append('<input class="description index_button" placeholder="Новое описание" /> ');
+				$("main .content").append('<br> <br> <input class="tags index_button" placeholder="Новый тэг" /> <button type="button" class="input_btn">+</button>');
 				$(".input_btn").on("click", function () {
 					if (($(".tags").val() !== "") && (($(".tags").val()).trim().length > 0)){
 						var newDescription = $('.description').val();
@@ -99,7 +99,6 @@ var main = function (toDoObjects) {
 						}
 					}
 				});
-
 				$(".tags").on("keypress", function (event) {
 					if (event.keyCode === 13) {
 						if (($(".tags").val() !== "") && (($(".tags").val()).trim().length > 0)){
