@@ -226,9 +226,8 @@ input:focus ~ .bar:after {
 	clip-path: var(--clip-path-clicked);
 }
 
-.group input {
-	
-	
+.group {
+	margin-left: 100px;
 }
 
 button {
@@ -291,16 +290,17 @@ header {
 	background: #B0C4DE;
 	overflow: hidden;
 }
-header h1 {
+header .amazeriffic {
 	font-style: italic;
 	font-size: 70px;
 	float: left;
 	width: 570px;
-	margin-left: 10px; 
+	margin-left: 100px; 
 	margin-bottom: 50px;
 }
 header nav {
 	float: right;
+	margin-right: 100px;
 }
 header a, footer a {
 	text-decoration: none;
@@ -308,6 +308,7 @@ header a, footer a {
 }
 .contact {
 	line-height: 35px;
+	margin-left: 100px;
 }
 main {
 	background: #B0C4DE;
